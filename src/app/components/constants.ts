@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:9090/api";
+export const BASE_URL = "https://trekshikhar-be.vercel.app/api";
