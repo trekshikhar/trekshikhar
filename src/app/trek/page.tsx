@@ -133,7 +133,7 @@ export default function TrekPage() {
                 </div>
 
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 p-12 sm:px-8 ">
                     {treks.map((trek) => (
                         <Link key={trek.id} href={`/singletrek/${trek.id}`}>
                             <div className="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full">

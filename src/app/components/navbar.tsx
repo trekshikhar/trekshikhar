@@ -133,7 +133,7 @@ export default function Navbar() {
                                 onClick={handleCreateClick}
                                 className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors  cursor-pointer"
                             >
-                                Budget Planner
+                                 Planner
                             </button>
                             <Link
                                 href="/contact"
