@@ -174,7 +174,7 @@ Use clear bullet points or headings. DO NOT return JSON or any code — only pla
 `.trim();
 
   try {
-    const key = "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"; // move to env in prod
+    const key = "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"; 
 
     const groqRes = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
