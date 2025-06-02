@@ -31,9 +31,9 @@ export default function AboutSection() {
 
 
                     {/* Images Row */}
-                    <div className="flex gap-4 mb-6">
+                    <div className="flex gap-4 mb-6 flex-wrap">
                         <Image src="/about1.jpg" alt="" width={200} height={10} className="rounded" style={{ height: "150px" }} />
-                        <Image src="/about2.jpg" alt="" width={200} height={120} className="rounded" style={{ height: "150px" }} />
+                        <Image src="/about2.jpg" alt="" width={200} height={10} className="rounded" style={{ height: "150px" }} />
                     </div>
 
                     <a

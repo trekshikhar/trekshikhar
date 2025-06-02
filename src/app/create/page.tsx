@@ -5,6 +5,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { Upload, ImageIcon, FileText, Type, AlignLeft, Send, AlertCircle } from "lucide-react"
+import { BASE_URL } from "../components/constants"
 
 interface FormErrors {
     title?: string
@@ -144,7 +145,7 @@ export default function CreatePost() {
                 formDataToSend.append("image", formData.image);
             }
 
-            const response = await fetch("http://localhost:9090/api/blog", {
+            const response = await fetch(`${BASE_URL}/blog`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${token}`,

@@ -1,6 +1,7 @@
 "use client";
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { X } from "lucide-react";
+import { BASE_URL } from "./constants";
 
 interface AuthModalContextType {
     setShowLoginModal: (value: boolean) => void;
@@ -78,7 +79,7 @@ export const AuthModalProvider = ({ children }: { children: ReactNode }) => {
         });
 
         try {
-            const response = await fetch("http://localhost:9090/api/auth/register", {
+            const response = await fetch(`${BASE_URL}/auth/register`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, email, password }),
@@ -128,7 +129,7 @@ export const AuthModalProvider = ({ children }: { children: ReactNode }) => {
         }
 
         try {
-            const response = await fetch("http://localhost:9090/api/auth/login", {
+            const response = await fetch(`${BASE_URL}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),

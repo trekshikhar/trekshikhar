@@ -5,6 +5,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { X, ImageIcon } from "lucide-react"
 import Image from "next/image"
+import { BASE_URL } from "../components/constants"
 
 
 export default function CreateTrekPage() {
@@ -120,7 +121,7 @@ export default function CreateTrekPage() {
                 data.append("image", formData.imageFile)
             }
 
-            const response = await fetch("http://localhost:9090/api/trek", {
+            const response = await fetch(`${BASE_URL}/trek`, {
                 method: "POST",
                 headers: {
                     Authorization: `Bearer ${token}`,
